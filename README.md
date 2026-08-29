@@ -277,7 +277,7 @@ familyaccounting/
 
 ## 📄 開源授權協議 (License)
 
-本專案採用 [MIT License](LICENSE) 開源授權，歡迎自由使用、修改與分享。
+本專案採用 [MIT License](LICENSE) 開源授權，歡迎自由使用、修改與分享、禁止商用。
 
 <div align="center">
   <sub>Made with ❤️ for smart family financial management.</sub>

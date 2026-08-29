@@ -1,0 +1,79 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": ["laravel", "framework"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "3.3",
+        "laravel/framework": "^11.0",
+        "laravel/tinker": "^2.9",
+        "league/oauth2-client": "^2.7",
+        "league/oauth2-google": "^4.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.26",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.0",
+        "phpunit/phpunit": "^10.5",
+        "spatie/laravel-ignition": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --ansi"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "11.x-dev"
+        },
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        },
+        "audit": { "abandoned": "ignore", "ignore": ["PKSA-cv56-2228-pzr6","PKSA-6r8f-nxsb-67bq","PKSA-gh7h-hhy4-byg7","PKSA-mwt3-h9tv-kx78","PKSA-hp6n-n4kz-21wk","PKSA-mckv-s5hg-868k","PKSA-qstp-ffwg-8hp6","PKSA-5vz3-q51h-7mg4","PKSA-7ztm-rpt3-qqzk","PKSA-4jrs-y99s-q8j6","PKSA-hbk6-2vfz-8f8n","PKSA-kj9c-tr41-t8mj","PKSA-872h-8556-2chm","PKSA-99tj-gg5v-4g74","PKSA-2kw5-jd8w-5mvh"], "block-insecure": false }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "repositories": [{
+        "name": "packagist",
+        "type": "composer",
+        "url": "https://repo.packagist.org"
+    }]
+}

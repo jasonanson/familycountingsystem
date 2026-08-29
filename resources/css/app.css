@@ -1,0 +1,276 @@
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 100 700;
+    src: url('/fonts/material-symbols-outlined.woff2') format('woff2'),
+         url('https://fonts.gstatic.com/s/materialsymbolsoutlined/v218/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2');
+    font-display: swap;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --surface-rgb: 255 248 242;
+    --surface-bright-rgb: 255 248 242;
+    --surface-dim-rgb: 12 10 9;
+    --surface-pure-rgb: 255 255 255;
+    --surface-container-rgb: 244 237 230;
+    --surface-container-low-rgb: 250 242 235;
+    --surface-container-high-rgb: 238 231 224;
+    --surface-container-highest-rgb: 232 225 219;
+    --surface-container-lowest-rgb: 255 255 255;
+    --surface-variant-rgb: 232 225 219;
+
+    --on-surface-rgb: 30 27 23;
+    --on-surface-variant-rgb: 60 73 71;
+
+    --border-base-rgb: 231 229 228;
+    --text-primary-rgb: 28 25 23;
+
+    --background-rgb: 255 248 242;
+    --on-background-rgb: 30 27 23;
+    --background-warm-rgb: 250 250 249;
+    --background-dim-rgb: 12 10 9;
+
+    --inverse-surface-rgb: 51 48 44;
+    --inverse-on-surface-rgb: 247 239 233;
+    --outline-rgb: 108 122 119;
+    --outline-variant-rgb: 187 202 198;
+}
+
+.dark, html.dark, [data-theme="dark"] {
+    --primary-rgb: 79 219 200;
+    --surface-rgb: 22 22 24;
+    --surface-bright-rgb: 32 32 36;
+    --surface-dim-rgb: 12 12 14;
+    --surface-pure-rgb: 28 28 32;
+    --surface-container-rgb: 36 36 42;
+    --surface-container-low-rgb: 24 24 28;
+    --surface-container-high-rgb: 44 44 52;
+    --surface-container-highest-rgb: 54 54 64;
+    --surface-container-lowest-rgb: 16 16 18;
+    --surface-variant-rgb: 40 40 48;
+
+    --on-surface-rgb: 248 250 252;
+    --on-surface-variant-rgb: 203 213 225;
+
+    --border-base-rgb: 48 48 56;
+    --text-primary-rgb: 248 250 252;
+
+    --background-rgb: 22 22 24;
+    --on-background-rgb: 248 250 252;
+    --background-warm-rgb: 24 24 28;
+    --background-dim-rgb: 12 12 14;
+
+    --inverse-surface-rgb: 247 239 233;
+    --inverse-on-surface-rgb: 28 28 32;
+    --outline-rgb: 120 120 130;
+    --outline-variant-rgb: 60 60 70;
+}
+
+/* 深色模式高對比度文字與清晰色彩補強 */
+.dark .text-primary,
+.dark a.text-primary,
+.dark h1.text-primary,
+.dark h2.text-primary,
+.dark h3.text-primary,
+.dark span.text-primary,
+.dark div.text-primary {
+    color: #4fdbc8 !important;
+}
+.dark .text-\[\#006b5f\],
+.dark .text-\[\#00574d\],
+.dark .text-\[\#00423b\] {
+    color: #4fdbc8 !important;
+}
+.dark .text-on-surface-variant {
+    color: #cbd5e1 !important;
+}
+.dark .text-text-primary,
+.dark .text-on-surface {
+    color: #f8fafc !important;
+}
+.dark .bg-primary\/10 {
+    background-color: rgba(79, 219, 200, 0.15) !important;
+}
+.dark .border-primary {
+    border-color: #4fdbc8 !important;
+}
+
+body {
+    font-family: "Microsoft JhengHei", system-ui, -apple-system, sans-serif;
+    background-color: rgb(var(--surface-rgb));
+    color: rgb(var(--on-surface-rgb));
+}
+
+.material-symbols-outlined {
+    font-family: "Material Symbols Outlined" !important;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga";
+    vertical-align: middle;
+}
+
+[x-cloak] { display: none !important; }
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.dark .glass-panel {
+    background: rgba(28, 28, 32, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; border-radius: 999px; }
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 107, 95, 0.18);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    transition: background-color 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 107, 95, 0.38); background-clip: content-box; }
+::-webkit-scrollbar-thumb:active { background: rgba(0, 107, 95, 0.55); background-clip: content-box; }
+::-webkit-scrollbar-corner { background: transparent; }
+html { scrollbar-width: thin; scrollbar-color: rgba(0, 107, 95, 0.30) transparent; }
+.dark ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.18); background-clip: content-box; }
+.dark ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.35); background-clip: content-box; }
+.dark html, html.dark { scrollbar-color: rgba(255, 255, 255, 0.30) transparent; }
+
+.text-nowrap, .no-wrap { white-space: nowrap; word-break: keep-all; }
+.header-action-text { white-space: nowrap; }
+@media (max-width: 1023px) {
+    .header-action-text { display: none; }
+}
+
+/* 自動深色模式表單控制項樣式 */
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="color"]),
+.dark select,
+.dark textarea {
+    background-color: rgb(var(--surface-pure-rgb)) !important;
+    color: rgb(var(--text-primary-rgb)) !important;
+    border-color: rgb(var(--border-base-rgb)) !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: rgba(161, 161, 170, 0.6) !important;
+}
+.dark select option {
+    background-color: rgb(var(--surface-pure-rgb));
+    color: rgb(var(--text-primary-rgb));
+}
+
+.dark .bg-white,
+.dark .bg-\[\#FAFAF9\],
+.dark .bg-\[\#fafaf9\],
+.dark .bg-\[\#FFF8F2\],
+.dark .bg-\[\#fff8f2\] {
+    background-color: rgb(var(--surface-pure-rgb)) !important;
+}
+.dark .border-\[\#E7E5E4\],
+.dark .border-\[\#e7e5e4\],
+.dark .border-gray-200,
+.dark .border-stone-200,
+.dark .border-neutral-200 {
+    border-color: rgb(var(--border-base-rgb)) !important;
+}
+.dark table thead th {
+    background-color: rgb(var(--surface-container-rgb)) !important;
+    color: rgb(var(--on-surface-variant-rgb)) !important;
+}
+.dark table tbody tr {
+    border-color: rgb(var(--border-base-rgb)) !important;
+}
+.dark table tbody tr:hover {
+    background-color: rgb(var(--surface-container-rgb) / 0.5) !important;
+}
+
+/* 全站 select 下拉樣式 */
+select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='%23006b5f' fill-opacity='0.7'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0.625rem center !important;
+    background-size: 1.125rem 1.125rem !important;
+    padding-right: 2.25rem !important;
+    cursor: pointer !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+select:focus,
+select:hover {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='%23006b5f'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+}
+select:disabled {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='%23999'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+select option {
+    background-color: rgb(var(--surface-pure-rgb));
+    color: rgb(var(--text-primary-rgb));
+    padding: 0.5rem 0.75rem;
+}
+select option:checked {
+    background-color: rgba(0, 107, 95, 0.15);
+    color: rgb(var(--primary-rgb, 0 107 95));
+    font-weight: 600;
+}
+select option:hover {
+    background-color: rgb(var(--surface-container-rgb));
+}
+.dark select option {
+    background-color: rgb(var(--surface-pure-rgb));
+    color: rgb(var(--text-primary-rgb));
+}
+.dark select option:checked {
+    background-color: rgba(20, 184, 166, 0.25);
+}
+
+/* === 全局 Loading 進度條 (Livewire wire:navigate SPA 跳轉) === */
+#nprogress, #homesync-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #006b5f 0%, #14b8a6 50%, #4fdbc8 100%);
+    z-index: 99999;
+    box-shadow: 0 0 10px rgba(20, 184, 166, 0.7);
+    transition: width 0.2s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
